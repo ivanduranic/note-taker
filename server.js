@@ -1,17 +1,20 @@
-var express = require('express');
-var app = express();
-var apiRoutes = require("./routes/apiRoutes");
-var htmlRoutes = require("./routes/htmlRoutes");
-var PORT = process.env.PORT || 3000
 
-//handle express data parsing || middlewares
+const http = require("http");
+const express = require("express");
+const apiRoutes = require("./routes/apiRoutes");
+const htmlRoutes = require("./routes/htmlRoutes");
+
+const app = express();
+const PORT = process.env.PORT || 3000;
+
+// Handling data parsing
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(express.static(__dirname + "./public"));
+app.use(express.static(__dirname + "/public"));
 
-app.use("/api", apiRoutes)
-app.use("/", htmlRoutes)
-//listen to the port
+app.use("/api", apiRoutes);
+app.use("/", htmlRoutes);
+
 app.listen(PORT, () => {
-    console.log(`I am listening on port: ${PORT}`)
+  console.log("App listening on PORT " + PORT);
 });
