@@ -36,12 +36,12 @@ router.delete("/notes/:id", async function (req, res) {
   var data = await readFile();
   let id = req.params.id;
 
-  function deleteNote() {
+  function removeNote() {
     data = data.filter((note) => note.id != id);
     writeFileAsync("db/db.json", JSON.stringify(data), "UTF-8");
     res.json(data);
   }
-  deleteNote();
+  removeNote();
 });
 //updating route
 router.put("/notes/:id", async function (req, res) {
