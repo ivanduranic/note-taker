@@ -14,7 +14,7 @@ Note Taker can be used to write and save notes. This application uses an Express
 
 ## Installation
 
-This application does not require installation. It's currently hosted On GitHub and you can access it at: https://github.com/ivanduranic/note-taker, and on Heroku, as well.
+This application does not require installation. It's currently hosted On GitHub and you can access it at: https://github.com/ivanduranic/note-taker, and on Heroku, as well: https://note-taker-id.herokuapp.com
 
 ## Usage
 
