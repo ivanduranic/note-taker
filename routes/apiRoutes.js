@@ -1,10 +1,10 @@
-const router = require("express").Router();
 const util = require("util");
 const fs = require("fs");
 const notes = require("../db/db.json");
+const router = require("express").Router();
 
-const readFileAsync = util.promisify(fs.readFile);
 const writeFileAsync = util.promisify(fs.writeFile);
+const readFileAsync = util.promisify(fs.readFile);
 
 async function readFile() {
   const data = await readFileAsync("db/db.json", "UTF-8");
